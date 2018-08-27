@@ -6,7 +6,7 @@ public class Mortar : MonoBehaviour {
 
 
 
-    public Transform placePosition;
+    //public Transform placePosition;
     public bool isFilled = false;
     public GameObject placedObj;
 
@@ -39,7 +39,7 @@ public class Mortar : MonoBehaviour {
 	}
 
 
-    public void DropObjInMortar(GameObject curHeldObj, Pickup pickupScript)
+    /*public void DropObjInMortar(GameObject curHeldObj, Pickup pickupScript)
     {
         if(full == false)
         {
@@ -76,7 +76,7 @@ public class Mortar : MonoBehaviour {
         numOfObjects--;
 
 
-    }
+    }*/
 
     public void Grind()
     {

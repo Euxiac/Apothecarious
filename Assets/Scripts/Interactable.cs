@@ -8,6 +8,8 @@ public class Interactable : MonoBehaviour {
 	public bool isPickedUp;
 	public GameObject bowlGFX;
 
+	public GameObject beakerGFX;
+
 	public GameObject rawGFX;
 
 	public GameObject curEquipment;

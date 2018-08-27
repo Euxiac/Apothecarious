@@ -44,12 +44,13 @@ public class Pickup : MonoBehaviour {
 
                     PickupObj(collider);
 
-                    if (collider.gameObject.GetComponent<Mortar>() != null)
+                    if (collider.gameObject.GetComponent<Equipment>() != null)
                     {
-                        Mortar mortar = collider.gameObject.GetComponent<Mortar>();
-                        if(mortar.itemList.Count >0)
+                        Equipment equipment = collider.gameObject.GetComponent<Equipment>();
+                        if(equipment.itemList.Count >0)
                         {
-                            mortar.Grind();
+                            
+                            equipment.ProcessItem();
                         }
 
                     }
@@ -61,17 +62,17 @@ public class Pickup : MonoBehaviour {
                     dropPosition = hit.point;
 
 
-                    if (collider.gameObject.GetComponent<Mortar>() != null)
+                    if (collider.gameObject.GetComponent<Equipment>() != null)
                     {
 
-                        Debug.Log("Looking at the mortar");
-                        Mortar mortar = collider.gameObject.GetComponent<Mortar>();
+                        Debug.Log("Looking at the Equipment");
+                        Equipment equipment = collider.gameObject.GetComponent<Equipment>();
 
                         if (heldObject != null)
                         {
-                            mortar.DropObjInMortar(heldObject, this);
+                            equipment.DropObjInEquipment(heldObject, this);
                         }
-                        else if (mortar.placedObj != null)
+                        else if (equipment.placedObj != null)
                         {
                             if(collider.GetComponent<Interactable>() != null)
                             {
@@ -173,9 +174,9 @@ public class Pickup : MonoBehaviour {
                     if(hitInteract.curEquipment == null)
                     {
                         SetTransfom(collider);
-                    }else if(hitInteract.curEquipment.GetComponent<Mortar>())
+                    }else if(hitInteract.curEquipment.GetComponent<Equipment>())
                     {
-                        hitInteract.curEquipment.GetComponent<Mortar>().PickupObjFromMortar(collider.gameObject, this);
+                        hitInteract.curEquipment.GetComponent<Equipment>().PickupObjFromEquipment(collider.gameObject, this);
 
                     }
                 }
