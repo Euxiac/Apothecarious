@@ -6,10 +6,16 @@ public class Interactable : MonoBehaviour {
 
 	public bool canPickup;
 	public bool isPickedUp;
-	public Mesh groundMesh;
-	public MeshFilter meshFilter;
+	public GameObject bowlGFX;
+
+	public GameObject rawGFX;
 
 	public GameObject curEquipment;
+
+	public bool isRaw;
+	public bool isGround;
+	public bool isBoiled;
+	
 
 	// Use this for initialization
 	void Start () {

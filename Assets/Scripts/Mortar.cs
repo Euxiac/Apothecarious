@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Mortar : MonoBehaviour {
 
-    public Mesh groundMesh;
 
 
     public Transform placePosition;
@@ -83,7 +82,10 @@ public class Mortar : MonoBehaviour {
     {
         GameObject grindObj = itemList[0].gameObject;
         Interactable objInteract = grindObj.GetComponent<Interactable>();
-        objInteract.GetComponent<MeshFilter>().mesh = objInteract.groundMesh;
+        objInteract.rawGFX.SetActive(false);
+        objInteract.bowlGFX.SetActive(true);
+        objInteract.isRaw = false;
+        objInteract.isGround = true;
         Debug.Log("Mortar Grind" + itemList[0].name);
 
     }
