@@ -7,7 +7,8 @@ public class Equipment : MonoBehaviour {
     public enum EquipmentType {mortar, cauldron, distiller};
     public EquipmentType curEquipType;
 
-    public Transform placePosition;
+    public List<Transform> positionList = new List<Transform>();
+    //public Transform placePosition;
     public bool isFilled = false;
     public GameObject placedObj;
 
@@ -18,6 +19,8 @@ public class Equipment : MonoBehaviour {
     //public GameObject grindObj;
 
     public List<GameObject> itemList = new List<GameObject>();
+
+    public GameObject tempPrefab;
 
     
 
@@ -36,6 +39,9 @@ public class Equipment : MonoBehaviour {
         {
             full = false;
         }
+
+        
+
 		
 	}
 
@@ -44,11 +50,17 @@ public class Equipment : MonoBehaviour {
     {
         if(full == false)
         {
-            curHeldObj.transform.SetParent(this.placePosition);
+            
+        
+
+            curHeldObj.transform.SetParent(positionList[itemList.Count]);
             curHeldObj.GetComponent<Collider>().enabled = true;
             curHeldObj.transform.localScale = Vector3.one;
             //curHeldObj.AddComponent<Rigidbody>();
-            curHeldObj.transform.localPosition = placePosition.localPosition;
+            curHeldObj.transform.position = positionList[itemList.Count].position;
+
+            
+
             curHeldObj.transform.rotation = Quaternion.identity;
             curHeldObj.GetComponent<Interactable>().isPickedUp = false;
             curHeldObj.GetComponent<Interactable>().curEquipment = this.gameObject;
@@ -57,6 +69,13 @@ public class Equipment : MonoBehaviour {
             pickupScript.heldObject = null;
             itemList.Add(curHeldObj);
             numOfObjects++;
+
+            for (int i = 0; i < itemList.Count;i++)
+            {
+
+            itemList[i].transform.position = positionList[i].position;
+
+            }
         }
         
 
@@ -76,6 +95,7 @@ public class Equipment : MonoBehaviour {
         itemList.Remove(obj);
         numOfObjects--;
 
+        
 
     }
 
@@ -84,7 +104,6 @@ public class Equipment : MonoBehaviour {
         Debug.Log("Mortar Grind" + itemList[0].name);
         GameObject processObj = itemList[0].gameObject;
         Interactable objInteract = processObj.GetComponent<Interactable>();
-        objInteract.rawGFX.SetActive(false);
         objInteract.isRaw = false;
 
         //Make this a switch 
@@ -96,6 +115,13 @@ public class Equipment : MonoBehaviour {
         else if(curEquipType == EquipmentType.cauldron)
         {
             Boil(objInteract);
+        }else if(curEquipType == EquipmentType.distiller)
+        {
+            if(full == true)     //This is HARDCODED, could probs make a reference to max objects
+            {
+                CreatePotion();   
+
+            }
         }
 
 
@@ -103,17 +129,28 @@ public class Equipment : MonoBehaviour {
 
     public void Grind(Interactable objInteract)
     {
-        
+        objInteract.rawGFX.SetActive(false);
         objInteract.bowlGFX.SetActive(true);
         objInteract.isGround = true;
 
     }
 
     public void Boil(Interactable objInteract)
-    {
+    {        
+        objInteract.rawGFX.SetActive(false);
         objInteract.beakerGFX.SetActive(true);
         objInteract.isBoiled = true;
     } 
 
+    public void CreatePotion()
+    {
+        Instantiate(tempPrefab, positionList[positionList.Count-1].position,Quaternion.identity);
+
+        Destroy(itemList[0]); 
+        Destroy(itemList[1]);
+        Destroy(itemList[2]);
+    }
+
 
 }
+
