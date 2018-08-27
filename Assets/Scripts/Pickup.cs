@@ -37,7 +37,7 @@ public class Pickup : MonoBehaviour {
             if (hit.collider != null)
             {
                 Collider collider = hit.collider;
-
+                // update shader
 
                 if (heldObject == null)
                 {
@@ -46,6 +46,11 @@ public class Pickup : MonoBehaviour {
 
                     if (collider.gameObject.GetComponent<Mortar>() != null)
                     {
+                        Mortar mortar = collider.gameObject.GetComponent<Mortar>();
+                        if(mortar.itemList.Count >0)
+                        {
+                            Debug.Log("Mortar Grind");
+                        }
 
                     }
 
@@ -68,8 +73,12 @@ public class Pickup : MonoBehaviour {
                         }
                         else if (mortar.placedObj != null)
                         {
-                            PickupObj(collider);
+                            if(collider.GetComponent<Interactable>() != null)
+                            {
+                                PickupObj(collider);
+                            }
                         }
+                        
 
                     }
                     else

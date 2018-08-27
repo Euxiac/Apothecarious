@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CombinationDemo.cs" />
+     <Compile Include="Assets\Scripts\EnumIngredients.cs" />
+     <Compile Include="Assets\Scripts\IngredientScript.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Mortar.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />

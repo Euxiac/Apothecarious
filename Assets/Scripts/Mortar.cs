@@ -74,5 +74,10 @@ public class Mortar : MonoBehaviour {
 
     }
 
+    public void Grind()
+    {
+        
+    }
+
 
 }
