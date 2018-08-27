@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 3ab3a8d66787c754cb9cb2bc5d0b04ff
+guid: f57bbf1c366e512418deefd9d592f3ee
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: uv check
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pSphere1
+    4300000: pestle
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 5
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

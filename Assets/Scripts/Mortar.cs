@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Mortar : MonoBehaviour {
 
+    public Mesh groundMesh;
+
+
     public Transform placePosition;
     public bool isFilled = false;
     public GameObject placedObj;
@@ -11,6 +14,8 @@ public class Mortar : MonoBehaviour {
     public int maxObjects;
     public int numOfObjects;
     public bool full = false;
+
+    //public GameObject grindObj;
 
     public List<GameObject> itemList = new List<GameObject>();
 
@@ -76,7 +81,11 @@ public class Mortar : MonoBehaviour {
 
     public void Grind()
     {
-        
+        GameObject grindObj = itemList[0].gameObject;
+        Interactable objInteract = grindObj.GetComponent<Interactable>();
+        objInteract.GetComponent<MeshFilter>().mesh = objInteract.groundMesh;
+        Debug.Log("Mortar Grind" + itemList[0].name);
+
     }
 
 

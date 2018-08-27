@@ -49,7 +49,7 @@ public class Pickup : MonoBehaviour {
                         Mortar mortar = collider.gameObject.GetComponent<Mortar>();
                         if(mortar.itemList.Count >0)
                         {
-                            Debug.Log("Mortar Grind");
+                            mortar.Grind();
                         }
 
                     }

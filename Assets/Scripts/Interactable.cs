@@ -6,6 +6,8 @@ public class Interactable : MonoBehaviour {
 
 	public bool canPickup;
 	public bool isPickedUp;
+	public Mesh groundMesh;
+	public MeshFilter meshFilter;
 
 	public GameObject curEquipment;
 
