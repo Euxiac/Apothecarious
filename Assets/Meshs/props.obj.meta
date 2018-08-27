@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: fa93a40d17086e648b0f01342750a922
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Barrel
+    100002: Barrel1
+    100004: Barrel2
+    100006: Bookshelf
+    100008: cabinet
+    100010: cauldron
+    100012: chest
+    100014: Coin
+    100016: Coin1
+    100018: Coin2
+    100020: crate
+    100022: distillery
+    100024: furnace
+    100026: Mortar_Pestle
+    100028: Mortar_Station
+    100030: plank
+    100032: plank1
+    100034: //RootNode
+    100036: recipebook
+    100038: rug
+    100040: rug1
+    100042: Shelf
+    100044: Shop_Desk
+    100046: workstation
+    400000: Barrel
+    400002: Barrel1
+    400004: Barrel2
+    400006: Bookshelf
+    400008: cabinet
+    400010: cauldron
+    400012: chest
+    400014: Coin
+    400016: Coin1
+    400018: Coin2
+    400020: crate
+    400022: distillery
+    400024: furnace
+    400026: Mortar_Pestle
+    400028: Mortar_Station
+    400030: plank
+    400032: plank1
+    400034: //RootNode
+    400036: recipebook
+    400038: rug
+    400040: rug1
+    400042: Shelf
+    400044: Shop_Desk
+    400046: workstation
+    2100000: BarrelMat
+    2100002: Barrel1Mat
+    2100004: Barrel2Mat
+    2100006: BookshelfMat
+    2100008: cabinetMat
+    2100010: cauldronMat
+    2100012: chestMat
+    2100014: CoinMat
+    2100016: Coin1Mat
+    2100018: Coin2Mat
+    2100020: crateMat
+    2100022: distilleryMat
+    2100024: furnaceMat
+    2100026: Mortar_PestleMat
+    2100028: Mortar_StationMat
+    2100030: plankMat
+    2100032: plank1Mat
+    2100034: recipebookMat
+    2100036: rugMat
+    2100038: rug1Mat
+    2100040: ShelfMat
+    2100042: Shop_DeskMat
+    2100044: workstationMat
+    2300000: Barrel
+    2300002: Barrel1
+    2300004: Barrel2
+    2300006: Bookshelf
+    2300008: cabinet
+    2300010: cauldron
+    2300012: chest
+    2300014: Coin
+    2300016: Coin1
+    2300018: Coin2
+    2300020: crate
+    2300022: distillery
+    2300024: furnace
+    2300026: Mortar_Pestle
+    2300028: Mortar_Station
+    2300030: plank
+    2300032: plank1
+    2300034: recipebook
+    2300036: rug
+    2300038: rug1
+    2300040: Shelf
+    2300042: Shop_Desk
+    2300044: workstation
+    3300000: Barrel
+    3300002: Barrel1
+    3300004: Barrel2
+    3300006: Bookshelf
+    3300008: cabinet
+    3300010: cauldron
+    3300012: chest
+    3300014: Coin
+    3300016: Coin1
+    3300018: Coin2
+    3300020: crate
+    3300022: distillery
+    3300024: furnace
+    3300026: Mortar_Pestle
+    3300028: Mortar_Station
+    3300030: plank
+    3300032: plank1
+    3300034: recipebook
+    3300036: rug
+    3300038: rug1
+    3300040: Shelf
+    3300042: Shop_Desk
+    3300044: workstation
+    4300000: Barrel
+    4300002: Barrel1
+    4300004: Barrel2
+    4300006: Bookshelf
+    4300008: cabinet
+    4300010: cauldron
+    4300012: chest
+    4300014: Coin
+    4300016: Coin1
+    4300018: Coin2
+    4300020: crate
+    4300022: distillery
+    4300024: furnace
+    4300026: Mortar_Pestle
+    4300028: Mortar_Station
+    4300030: plank
+    4300032: plank1
+    4300034: recipebook
+    4300036: rug
+    4300038: rug1
+    4300040: Shelf
+    4300042: Shop_Desk
+    4300044: workstation
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
