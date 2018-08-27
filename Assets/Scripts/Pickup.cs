@@ -64,7 +64,7 @@ public class Pickup : MonoBehaviour {
 
                         if (heldObject != null)
                         {
-                            mortar.DropObjInMortar(heldObject);
+                            mortar.DropObjInMortar(heldObject, this);
                         }
                         else if (mortar.placedObj != null)
                         {
