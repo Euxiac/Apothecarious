@@ -12,6 +12,8 @@ public class Mortar : MonoBehaviour {
     public int numOfObjects;
     public bool full = false;
 
+    public List<GameObject> itemList = new List<GameObject>();
+
     
 
 	// Use this for initialization
@@ -42,10 +44,13 @@ public class Mortar : MonoBehaviour {
             curHeldObj.transform.localScale = Vector3.one;
             //curHeldObj.AddComponent<Rigidbody>();
             curHeldObj.transform.localPosition = placePosition.localPosition;
+            curHeldObj.transform.rotation = Quaternion.identity;
             curHeldObj.GetComponent<Interactable>().isPickedUp = false;
+            curHeldObj.GetComponent<Interactable>().curEquipment = this.gameObject;
             isFilled = true;
             placedObj = curHeldObj;
             pickupScript.heldObject = null;
+            itemList.Add(curHeldObj);
             numOfObjects++;
         }
         
@@ -53,15 +58,20 @@ public class Mortar : MonoBehaviour {
 
     }
 
-    public void PickupObjFromMortar()
+    public void PickupObjFromMortar(GameObject obj, Pickup pickupScript)
     {
-        /*if (mortar != null)
-        {
-            if (mortar.placedObj != null)
-            {
-                GameObject obj = mortar.placedObj;
-            }
-        }*/
+        obj.transform.SetParent(pickupScript.hand);
+        obj.GetComponent<Collider>().enabled = false;
+        obj.transform.position = pickupScript.hand.position;
+        //obj.transform.localScale = Vector3.one * pickupScript.shrinkScale;
+        obj.transform.rotation = Quaternion.identity;
+        pickupScript.heldObject = obj;
+        obj.GetComponent<Interactable>().isPickedUp = true;
+        obj.GetComponent<Interactable>().curEquipment = null;
+        itemList.Remove(obj);
+        numOfObjects--;
+
+
     }
 
 

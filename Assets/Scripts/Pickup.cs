@@ -161,10 +161,16 @@ public class Pickup : MonoBehaviour {
 
                 if (hitInteract.canPickup == true)
                 {
-                    SetTransfom(collider);
+                    if(hitInteract.curEquipment == null)
+                    {
+                        SetTransfom(collider);
+                    }else if(hitInteract.curEquipment.GetComponent<Mortar>())
+                    {
+                        hitInteract.curEquipment.GetComponent<Mortar>().PickupObjFromMortar(collider.gameObject, this);
+
+                    }
                 }
 
-                Debug.Log("WOO");
             }
             else
             {

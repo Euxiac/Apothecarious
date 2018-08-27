@@ -7,6 +7,8 @@ public class Interactable : MonoBehaviour {
 	public bool canPickup;
 	public bool isPickedUp;
 
+	public GameObject curEquipment;
+
 	// Use this for initialization
 	void Start () {
 		
