@@ -7,32 +7,32 @@ using UnityStandardAssets.Utility;
 
 
 
-public class Pickup : MonoBehaviour {
+public class Pickup : MonoBehaviour
+{
 
-	public Camera cam;
-	public Transform hand;
+    public Camera cam;
+    public Transform hand;
     public float shrinkScale = .25f;
     public GameObject heldObject;
     public Vector3 dropPosition;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         RaycastHit hit = ShootRay();
         if (hit.collider != null)
         {
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-		{
-
-
+        if (Input.GetButtonDown("Interaction"))
+        {
             if (hit.collider != null)
             {
                 Collider collider = hit.collider;
@@ -40,30 +40,23 @@ public class Pickup : MonoBehaviour {
 
                 if (heldObject == null)
                 {
-
                     PickupObj(collider);
 
                     if (collider.gameObject.GetComponent<Equipment>() != null)
                     {
                         Equipment equipment = collider.gameObject.GetComponent<Equipment>();
-                        if(equipment.itemList.Count >0)
+                        if (equipment.itemList.Count > 0)
                         {
-                            
                             equipment.ProcessItem();
                         }
-
                     }
-
-
                 }
                 else if (heldObject != null)
                 {
                     dropPosition = hit.point;
 
-
                     if (collider.gameObject.GetComponent<Equipment>() != null)
                     {
-
                         Debug.Log("Looking at the Equipment");
                         Equipment equipment = collider.gameObject.GetComponent<Equipment>();
 
@@ -73,13 +66,11 @@ public class Pickup : MonoBehaviour {
                         }
                         else if (equipment.placedObj != null)
                         {
-                            if(collider.GetComponent<Interactable>() != null)
+                            if (collider.GetComponent<Interactable>() != null)
                             {
                                 PickupObj(collider);
                             }
                         }
-                        
-
                     }
                     else
                     {
@@ -87,12 +78,8 @@ public class Pickup : MonoBehaviour {
                     }
                 }
             }
-
         }
-		
-		
-		
-	}
+    }
 
     public RaycastHit ShootRay()
     {
@@ -102,12 +89,12 @@ public class Pickup : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, 10f))
         {
             Debug.DrawRay(cam.transform.position, cam.transform.forward, Color.red);
-            
 
 
 
-           
-            
+
+
+
 
         }
         else
@@ -123,7 +110,7 @@ public class Pickup : MonoBehaviour {
     public void SetTransfom(Collider collider)
     {
 
-        if(collider.gameObject.GetComponent<Rigidbody>() != null)
+        if (collider.gameObject.GetComponent<Rigidbody>() != null)
         {
             Destroy(collider.gameObject.GetComponent<Rigidbody>());
         }
@@ -142,7 +129,7 @@ public class Pickup : MonoBehaviour {
         curHeldObj.GetComponent<Collider>().enabled = true;
         curHeldObj.transform.localScale = Vector3.one;
         curHeldObj.AddComponent<Rigidbody>();
-        curHeldObj.transform.localPosition = dropPosition + new Vector3(0,1,0);
+        curHeldObj.transform.localPosition = dropPosition + new Vector3(0, 1, 0);
         curHeldObj.GetComponent<Interactable>().isPickedUp = false;
 
         heldObject = null;
@@ -170,10 +157,11 @@ public class Pickup : MonoBehaviour {
 
                 if (hitInteract.canPickup == true)
                 {
-                    if(hitInteract.curEquipment == null)
+                    if (hitInteract.curEquipment == null)
                     {
                         SetTransfom(collider);
-                    }else if(hitInteract.curEquipment.GetComponent<Equipment>())
+                    }
+                    else if (hitInteract.curEquipment.GetComponent<Equipment>())
                     {
                         hitInteract.curEquipment.GetComponent<Equipment>().PickupObjFromEquipment(collider.gameObject, this);
 
@@ -186,12 +174,12 @@ public class Pickup : MonoBehaviour {
                 return;
             }
         }
-        
+
     }
 
-    
 
 
 
-	
+
+
 }

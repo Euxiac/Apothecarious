@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour {
+public class Equipment : MonoBehaviour
+{
 
-    public enum EquipmentType {mortar, cauldron, distiller};
+    public enum EquipmentType { mortar, cauldron, distiller };
     public EquipmentType curEquipType;
 
     public List<Transform> positionList = new List<Transform>();
@@ -21,49 +22,41 @@ public class Equipment : MonoBehaviour {
     public List<GameObject> itemList = new List<GameObject>();
 
     public GameObject tempPrefab;
-    
+
     public GameObject particles;
-    
-	
 
-    
-	// Use this for initialization
-	void Start () {
-   particles.SetActive (false);
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public Recipes recipeBook;
 
-        if(numOfObjects >= maxObjects)
+
+    // Use this for initialization
+    void Start()
+    {
+        particles.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (numOfObjects >= maxObjects)
         {
             full = true;
-        }else
+        }
+        else
         {
             full = false;
         }
-
-       
-
-		
-	}
+    }
 
 
     public void DropObjInEquipment(GameObject curHeldObj, Pickup pickupScript)
     {
-        if(full == false)
+        if (full == false)
         {
-            
-        
-
             curHeldObj.transform.SetParent(positionList[itemList.Count]);
             curHeldObj.GetComponent<Collider>().enabled = true;
             curHeldObj.transform.localScale = Vector3.one;
             //curHeldObj.AddComponent<Rigidbody>();
             curHeldObj.transform.position = positionList[itemList.Count].position;
-
-            
 
             curHeldObj.transform.rotation = Quaternion.identity;
             curHeldObj.GetComponent<Interactable>().isPickedUp = false;
@@ -74,16 +67,11 @@ public class Equipment : MonoBehaviour {
             itemList.Add(curHeldObj);
             numOfObjects++;
 
-            for (int i = 0; i < itemList.Count;i++)
+            for (int i = 0; i < itemList.Count; i++)
             {
-
-            itemList[i].transform.position = positionList[i].position;
-
+                itemList[i].transform.position = positionList[i].position;
             }
         }
-        
-
-
     }
 
     public void PickupObjFromEquipment(GameObject obj, Pickup pickupScript)
@@ -98,10 +86,7 @@ public class Equipment : MonoBehaviour {
         obj.GetComponent<Interactable>().curEquipment = null;
         itemList.Remove(obj);
         numOfObjects--;
-        particles.SetActive (false); //switch off active particles when picked up
-       
-        
-
+        particles.SetActive(false); //switch off active particles when picked up
     }
 
     public void ProcessItem()
@@ -113,63 +98,51 @@ public class Equipment : MonoBehaviour {
 
         //Make this a switch 
 
-        if(curEquipType == EquipmentType.mortar)
+        if (curEquipType == EquipmentType.mortar)
         {
             Grind(objInteract);
         }
-        else if(curEquipType == EquipmentType.cauldron)
+        else if (curEquipType == EquipmentType.cauldron)
         {
             Boil(objInteract);
-        }else if(curEquipType == EquipmentType.distiller)
+        }
+        else if (curEquipType == EquipmentType.distiller)
         {
-            if(full == true)     //This is HARDCODED, could probs make a reference to max objects
+            if (full == true)     //This is HARDCODED, could probs make a reference to max objects
             {
-                CreatePotion();   
-
+                CreatePotion();
             }
         }
-
-
     }
 
     public void Grind(Interactable objInteract) // grind, add particle efect here
     {
-        if(objInteract.curState == Interactable.IngredientState.raw)
+        if (objInteract.curState == IngredientState.raw)
         {
             objInteract.rawGFX.SetActive(false);
             objInteract.bowlGFX.SetActive(true);
             objInteract.isGround = true;
-            objInteract.curState = Interactable.IngredientState.ground;
-
+            objInteract.isRaw = false;
+            objInteract.curState = IngredientState.ground;
         }
-        
-
     }
 
     public void Boil(Interactable objInteract) // boil , add particle here
-    {        
-        if(objInteract.curState == Interactable.IngredientState.raw)
+    {
+        if (objInteract.curState == IngredientState.raw)
         {
-            particles.SetActive (true);
-            Debug.Log ("boiling cauldern");
+            particles.SetActive(true);
+            Debug.Log("boiling cauldern");
             objInteract.rawGFX.SetActive(false);
             objInteract.beakerGFX.SetActive(true);
             objInteract.isBoiled = true;
-            objInteract.curState = Interactable.IngredientState.boiled;
-            
-            
-            
-          
-		
-		}
-		
-
-    } 
+            objInteract.isRaw = false;
+            objInteract.curState = IngredientState.boiled;
+        }
+    }
 
     public void CreatePotion()
     {
-        Instantiate(tempPrefab, positionList[positionList.Count-1].position,Quaternion.identity);
-
 
         //I'm pretty lost as to what to do now, Maaaaybe a new class or function where you pass each ingredient type
         //&& if statements for the potions, problem is you gotta pass in teh bools for boiled & ground
@@ -177,30 +150,55 @@ public class Equipment : MonoBehaviour {
         //Ok I did the enum, i'll leave the status bools for now, theyre not hurting anyone
         //honestly lets try else ifs for each potion????
 
-        Debug.Log(itemList[0].GetComponent<Interactable>().ingredientType +" " + itemList[0].GetComponent<Interactable>().curState.ToString() + 
-        " + " + itemList[1].GetComponent<Interactable>().ingredientType +" " + itemList[1].GetComponent<Interactable>().curState.ToString() +
-        " + " + itemList[2].GetComponent<Interactable>().ingredientType +" " + itemList[2].GetComponent<Interactable>().curState.ToString());
+        Debug.Log(itemList[0].GetComponent<Interactable>().ingredientType + " " + itemList[0].GetComponent<Interactable>().curState.ToString() +
+        " + " + itemList[1].GetComponent<Interactable>().ingredientType + " " + itemList[1].GetComponent<Interactable>().curState.ToString() +
+        " + " + itemList[2].GetComponent<Interactable>().ingredientType + " " + itemList[2].GetComponent<Interactable>().curState.ToString());
 
-        CheckRecipe(itemList[0].GetComponent<Interactable>(),itemList[1].GetComponent<Interactable>(),itemList[2].GetComponent<Interactable>());
-
-        Destroy(itemList[0]); 
-        Destroy(itemList[1]);
-        Destroy(itemList[2]);
+        CheckRecipe(itemList[0].GetComponent<Interactable>(), itemList[1].GetComponent<Interactable>(), itemList[2].GetComponent<Interactable>());
     }
 
-    public void CheckRecipe(Interactable ing1, Interactable ing2, Interactable ing3 )
+    public void CheckRecipe(Interactable ing1, Interactable ing2, Interactable ing3)
     {
-        if(ing1.ingredientType == Ingredients.Deathcap_Mushroom &&
-         ing1.curState == Interactable.IngredientState.ground && 
-         ing2.ingredientType == Ingredients.Sleep_Potion &&
-         ing2.curState == Interactable.IngredientState.raw &&
-         ing3.ingredientType == Ingredients.White_Lily &&
-         ing3.curState == Interactable.IngredientState.boiled)
+        //Bool to determine failure of the attempt, defaults to true
+        bool isFailed = true;
+        //Loop through each recipe in the provided book
+        foreach (Recipe recipe in recipeBook.recipes)
         {
-            Debug.Log("Death Potion Complete");
+            //If the given ingredients (in the given order) match a recipe
+            if (ing1.ingredientType == recipe.ingredientOne &&
+                ing1.curState == recipe.stateOne &&
+                ing2.ingredientType == recipe.ingredientTwo &&
+                ing2.curState == recipe.stateTwo &&
+                ing3.ingredientType == recipe.ingredientThree &&
+                ing3.curState == recipe.stateThree)
+            {
+                Debug.Log(recipe.potionName + " Created!");
+                //Set as a successful potion
+                isFailed = false;
+                //Grab Interactable script from tempPrefab, and initialise variables to recipe's resulting potion
+                Interactable potionInteract = tempPrefab.GetComponent<Interactable>();
+                potionInteract.ingredientType = recipe.potionName;
+                potionInteract.curState = IngredientState.raw;
+                potionInteract.isRaw = true;
+                potionInteract.isGround = false;
+                potionInteract.isBoiled = false;
+                //Destroy the GameObjects in the list before clearing the list
+                Destroy(itemList[0]);
+                Destroy(itemList[1]);
+                Destroy(itemList[2]);
+                //Empty the list of items, and set numObjects to 0
+                itemList.Clear();
+                numOfObjects = 0;
+                //Instantiate the potion prefab
+                Instantiate(tempPrefab, positionList[positionList.Count - 1].position, Quaternion.identity);
+            }
+        }
+        //Respond to failed potion
+        if (isFailed)
+        {
+            //Will need to destroy ingredients in here if that is the intention
+            Debug.Log("EXPLOSION!!");
         }
     }
-
-
 }
 
