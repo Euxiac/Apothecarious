@@ -27,7 +27,6 @@ public class Pickup : MonoBehaviour {
         RaycastHit hit = ShootRay();
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.gameObject.name);
         }
 
         if (Input.GetKeyDown(KeyCode.E))

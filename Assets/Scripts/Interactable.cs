@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour {
+public class Interactable : MonoBehaviour {//honestly this should be named ingredients
 
 	public bool canPickup;
 	public bool isPickedUp;
+
+	public enum IngredientState{raw,ground,boiled};
+
+	public IngredientState curState;
+
+	public Ingredients ingredientType;
 	public GameObject bowlGFX;
 
 	public GameObject beakerGFX;
 
 	public GameObject rawGFX;
+	
 
 	public GameObject curEquipment;
 

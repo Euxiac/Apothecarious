@@ -11,16 +11,19 @@ using UnityEngine;
 //This is to ensure that all objects/scripts use the same reference material
 public enum Ingredients
 {
-    INGREDIENT_ONE,
-    INGREDIENT_TWO,
-    INGREDIENT_THREE,
-    INGREDIENT_FOUR,
-    INGREDIENT_FIVE,
-    INGREDIENT_SIX,
-    INGREDIENT_SEVEN,
-    INGREDIENT_EIGHT,
-    INGREDIENT_NINE,
-    INGREDIENT_TEN,
-    INGREDIENT_ELEVEN,
-    INGREDIENT_TWELVE
+    Distilled_Water,
+    Willow_Bark,
+    Rock_Salt,
+    Deathcap_Mushroom,
+    White_Lily,
+    Cuttlefish_Ink,
+    Mandrake_Root,
+    Pearl,
+    Quicksilver,
+    Unicorn_Horn,
+    Phoenix_Ashes,
+    Blood,
+    Sleep_Potion
 }
+
+

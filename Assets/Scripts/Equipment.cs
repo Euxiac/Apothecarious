@@ -129,26 +129,63 @@ public class Equipment : MonoBehaviour {
 
     public void Grind(Interactable objInteract)
     {
-        objInteract.rawGFX.SetActive(false);
-        objInteract.bowlGFX.SetActive(true);
-        objInteract.isGround = true;
+        if(objInteract.curState == Interactable.IngredientState.raw)
+        {
+            objInteract.rawGFX.SetActive(false);
+            objInteract.bowlGFX.SetActive(true);
+            objInteract.isGround = true;
+            objInteract.curState = Interactable.IngredientState.ground;
+        }
+        
 
     }
 
     public void Boil(Interactable objInteract)
     {        
-        objInteract.rawGFX.SetActive(false);
-        objInteract.beakerGFX.SetActive(true);
-        objInteract.isBoiled = true;
+        if(objInteract.curState == Interactable.IngredientState.raw)
+        {
+            objInteract.rawGFX.SetActive(false);
+            objInteract.beakerGFX.SetActive(true);
+            objInteract.isBoiled = true;
+            objInteract.curState = Interactable.IngredientState.boiled;
+        }
+        
+
     } 
 
     public void CreatePotion()
     {
         Instantiate(tempPrefab, positionList[positionList.Count-1].position,Quaternion.identity);
 
+
+        //I'm pretty lost as to what to do now, Maaaaybe a new class or function where you pass each ingredient type
+        //&& if statements for the potions, problem is you gotta pass in teh bools for boiled & ground
+        //Maybe it would be easiest if it was an enum for ground & boiled??
+        //Ok I did the enum, i'll leave the status bools for now, theyre not hurting anyone
+        //honestly lets try else ifs for each potion????
+
+        Debug.Log(itemList[0].GetComponent<Interactable>().ingredientType +" " + itemList[0].GetComponent<Interactable>().curState.ToString() + 
+        " + " + itemList[1].GetComponent<Interactable>().ingredientType +" " + itemList[1].GetComponent<Interactable>().curState.ToString() +
+        " + " + itemList[2].GetComponent<Interactable>().ingredientType +" " + itemList[2].GetComponent<Interactable>().curState.ToString());
+
+        CheckRecipe(itemList[0].GetComponent<Interactable>(),itemList[1].GetComponent<Interactable>(),itemList[2].GetComponent<Interactable>());
+
         Destroy(itemList[0]); 
         Destroy(itemList[1]);
         Destroy(itemList[2]);
+    }
+
+    public void CheckRecipe(Interactable ing1, Interactable ing2, Interactable ing3 )
+    {
+        if(ing1.ingredientType == Ingredients.Deathcap_Mushroom &&
+         ing1.curState == Interactable.IngredientState.ground && 
+         ing2.ingredientType == Ingredients.Sleep_Potion &&
+         ing2.curState == Interactable.IngredientState.raw &&
+         ing3.ingredientType == Ingredients.White_Lily &&
+         ing3.curState == Interactable.IngredientState.boiled)
+        {
+            Debug.Log("WOOOOOOOO");
+        }
     }
 
 

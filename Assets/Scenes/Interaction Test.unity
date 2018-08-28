@@ -226,6 +226,11 @@ Prefab:
       propertyPath: m_Name
       value: Vial Holder (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114022281898183106, guid: b864df8bcc2011947874a88f3b44c85d,
+        type: 2}
+      propertyPath: ingredientType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b864df8bcc2011947874a88f3b44c85d, type: 2}
   m_IsPrefabParent: 0
@@ -868,6 +873,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114022281898183106, guid: b864df8bcc2011947874a88f3b44c85d,
+        type: 2}
+      propertyPath: ingredientType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b864df8bcc2011947874a88f3b44c85d, type: 2}
   m_IsPrefabParent: 0
@@ -981,6 +991,11 @@ Prefab:
     - target: {fileID: 1951944301893804, guid: b864df8bcc2011947874a88f3b44c85d, type: 2}
       propertyPath: m_Name
       value: Vial Holder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114022281898183106, guid: b864df8bcc2011947874a88f3b44c85d,
+        type: 2}
+      propertyPath: ingredientType
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b864df8bcc2011947874a88f3b44c85d, type: 2}
