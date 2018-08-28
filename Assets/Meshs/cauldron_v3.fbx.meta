@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: c620698093a6df34b87387e58741ec26
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: cauldron
+    100002: cauldron_base
+    100004: //RootNode
+    100006: gauge.001
+    100008: gauge.002
+    100010: gauge.003
+    100012: gauge.004
+    100014: gauge.005
+    100016: gauge.006
+    100018: grate
+    100020: handle
+    100022: handle.001
+    100024: handle.002
+    100026: handle.003
+    100028: handle.004
+    100030: handle.005
+    100032: hinge
+    100034: latch
+    100036: latch.001
+    100038: log
+    100040: log.001
+    100042: log.002
+    100044: log.003
+    100046: log.004
+    100048: log.005
+    100050: log.006
+    100052: log.007
+    100054: log.008
+    100056: pipe
+    100058: pipes
+    100060: pipes.001
+    100062: tap
+    100064: tap_handle
+    400000: cauldron
+    400002: cauldron_base
+    400004: //RootNode
+    400006: gauge.001
+    400008: gauge.002
+    400010: gauge.003
+    400012: gauge.004
+    400014: gauge.005
+    400016: gauge.006
+    400018: grate
+    400020: handle
+    400022: handle.001
+    400024: handle.002
+    400026: handle.003
+    400028: handle.004
+    400030: handle.005
+    400032: hinge
+    400034: latch
+    400036: latch.001
+    400038: log
+    400040: log.001
+    400042: log.002
+    400044: log.003
+    400046: log.004
+    400048: log.005
+    400050: log.006
+    400052: log.007
+    400054: log.008
+    400056: pipe
+    400058: pipes
+    400060: pipes.001
+    400062: tap
+    400064: tap_handle
+    2100000: logs
+    2100002: cauldron_pot
+    2100004: pipes_gauges
+    2100006: cauldron_base
+    2300000: cauldron
+    2300002: cauldron_base
+    2300004: gauge.001
+    2300006: gauge.002
+    2300008: gauge.003
+    2300010: gauge.004
+    2300012: gauge.005
+    2300014: gauge.006
+    2300016: grate
+    2300018: handle
+    2300020: handle.001
+    2300022: handle.002
+    2300024: handle.003
+    2300026: handle.004
+    2300028: handle.005
+    2300030: hinge
+    2300032: latch
+    2300034: latch.001
+    2300036: log
+    2300038: log.001
+    2300040: log.002
+    2300042: log.003
+    2300044: log.004
+    2300046: log.005
+    2300048: log.006
+    2300050: log.007
+    2300052: log.008
+    2300054: pipe
+    2300056: pipes
+    2300058: pipes.001
+    2300060: tap
+    2300062: tap_handle
+    3300000: cauldron
+    3300002: cauldron_base
+    3300004: gauge.001
+    3300006: gauge.002
+    3300008: gauge.003
+    3300010: gauge.004
+    3300012: gauge.005
+    3300014: gauge.006
+    3300016: grate
+    3300018: handle
+    3300020: handle.001
+    3300022: handle.002
+    3300024: handle.003
+    3300026: handle.004
+    3300028: handle.005
+    3300030: hinge
+    3300032: latch
+    3300034: latch.001
+    3300036: log
+    3300038: log.001
+    3300040: log.002
+    3300042: log.003
+    3300044: log.004
+    3300046: log.005
+    3300048: log.006
+    3300050: log.007
+    3300052: log.008
+    3300054: pipe
+    3300056: pipes
+    3300058: pipes.001
+    3300060: tap
+    3300062: tap_handle
+    4300000: log.008
+    4300002: log.007
+    4300004: log.006
+    4300006: log.005
+    4300008: log.004
+    4300010: log.003
+    4300012: log.002
+    4300014: log.001
+    4300016: log
+    4300018: tap_handle
+    4300020: tap
+    4300022: cauldron
+    4300024: pipe
+    4300026: gauge.006
+    4300028: pipes.001
+    4300030: handle.002
+    4300032: handle.003
+    4300034: pipes
+    4300036: handle.005
+    4300038: handle.004
+    4300040: handle.001
+    4300042: handle
+    4300044: hinge
+    4300046: latch
+    4300048: latch.001
+    4300050: grate
+    4300052: cauldron_base
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cauldron_base
+    second: {fileID: 2100000, guid: b271d7e3cc70abd47a84da3238fbafc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cauldron_pot
+    second: {fileID: 2100000, guid: bc79cf2853c283b458d4800bdc332aab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: logs
+    second: {fileID: 2100000, guid: 05a6d8a41e8536a42994dcb1384e58a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipes_gauges
+    second: {fileID: 2100000, guid: 7b968e6ac2df4d446adce86784634ef5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
