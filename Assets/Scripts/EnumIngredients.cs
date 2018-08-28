@@ -23,7 +23,25 @@ public enum Ingredients
     Unicorn_Horn,
     Phoenix_Ashes,
     Blood,
-    Sleep_Potion
+    //Potions used for names, and as ingredients
+    Potion_Violent_Death,
+    Potion_Brain_Rot,
+    Potion_Sirens_Call,
+    Potion_Vitality,
+    Potion_Minds_Eye,
+    Potion_Extract_of_Candour,
+    Potion_Tonic_of_Vigor,
+    Potion_Elixir_of_Life,
+    Potion_Nights_Embrace,
+    Potion_Failed_Potion
+}
+
+//Shifted from equipment to make globally available
+public enum IngredientState
+{
+    raw,
+    ground,
+    boiled
 }
 
 

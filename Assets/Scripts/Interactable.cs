@@ -2,37 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour {//honestly this should be named ingredients
+public class Interactable : MonoBehaviour
+{//honestly this should be named ingredients
 
-	public bool canPickup;
-	public bool isPickedUp;
+    public bool canPickup;
+    public bool isPickedUp;
 
-	public enum IngredientState{raw,ground,boiled};
+    public IngredientState curState;
 
-	public IngredientState curState;
+    public Ingredients ingredientType;
+    public GameObject bowlGFX;
 
-	public Ingredients ingredientType;
-	public GameObject bowlGFX;
+    public GameObject beakerGFX;
 
-	public GameObject beakerGFX;
+    public GameObject rawGFX;
 
-	public GameObject rawGFX;
-	
 
-	public GameObject curEquipment;
+    public GameObject curEquipment;
 
-	public bool isRaw;
-	public bool isGround;
-	public bool isBoiled;
-	
+    public bool isRaw;
+    public bool isGround;
+    public bool isBoiled;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15790,6 +15790,117 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312069233}
   m_Mesh: {fileID: 4300040, guid: fa93a40d17086e648b0f01342750a922, type: 3}
+--- !u!1 &1323202318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1323202320}
+  - component: {fileID: 1323202319}
+  m_Layer: 0
+  m_Name: RecipeBook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1323202319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323202318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9027967ae4bbd0c42b8c0d249b74ead6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipes:
+  - potionName: 12
+    ingredientOne: 3
+    stateOne: 1
+    ingredientTwo: 10
+    stateTwo: 0
+    ingredientThree: 4
+    stateThree: 2
+  - potionName: 13
+    ingredientOne: 20
+    stateOne: 0
+    ingredientTwo: 3
+    stateTwo: 2
+    ingredientThree: 8
+    stateThree: 0
+  - potionName: 14
+    ingredientOne: 6
+    stateOne: 2
+    ingredientTwo: 7
+    stateTwo: 1
+    ingredientThree: 11
+    stateThree: 2
+  - potionName: 15
+    ingredientOne: 1
+    stateOne: 2
+    ingredientTwo: 0
+    stateTwo: 0
+    ingredientThree: 2
+    stateThree: 1
+  - potionName: 16
+    ingredientOne: 7
+    stateOne: 1
+    ingredientTwo: 5
+    stateTwo: 0
+    ingredientThree: 2
+    stateThree: 1
+  - potionName: 17
+    ingredientOne: 7
+    stateOne: 1
+    ingredientTwo: 5
+    stateTwo: 2
+    ingredientThree: 2
+    stateThree: 0
+  - potionName: 18
+    ingredientOne: 8
+    stateOne: 2
+    ingredientTwo: 5
+    stateTwo: 0
+    ingredientThree: 11
+    stateThree: 0
+  - potionName: 20
+    ingredientOne: 1
+    stateOne: 2
+    ingredientTwo: 4
+    stateTwo: 2
+    ingredientThree: 0
+    stateThree: 0
+  - potionName: 19
+    ingredientOne: 3
+    stateOne: 2
+    ingredientTwo: 9
+    stateTwo: 1
+    ingredientThree: 10
+    stateThree: 0
+  - potionName: 21
+    ingredientOne: 3
+    stateOne: 2
+    ingredientTwo: 3
+    stateTwo: 1
+    ingredientThree: 11
+    stateThree: 0
+--- !u!4 &1323202320
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323202318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5055046, y: 3.5071936, z: -8.426506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1329206384
 GameObject:
   m_ObjectHideFlags: 0
