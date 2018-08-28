@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: c2688fb03969858418eaaaa79c1f42cf
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Beaker
+    100002: BunsensBurn
+    100004: BunsensBurn1
+    100006: BunsensBurn3
+    100008: //RootNode
+    100010: Drip
+    100012: EggVial
+    100014: pCylinder1
+    100016: pCylinder2
+    100018: pCylinder3
+    100020: pCylinder4
+    100022: Philter
+    100024: PhilterStand
+    100026: PhilterStandTall
+    100028: polySurface1
+    100030: polySurface10
+    100032: polySurface6
+    100034: polySurface8
+    100036: polySurface9
+    100038: pTorus20
+    100040: pTorus21
+    100042: pTorus23
+    100044: pTorus25
+    100046: Tube1
+    400000: Beaker
+    400002: BunsensBurn
+    400004: BunsensBurn1
+    400006: BunsensBurn3
+    400008: //RootNode
+    400010: Drip
+    400012: EggVial
+    400014: pCylinder1
+    400016: pCylinder2
+    400018: pCylinder3
+    400020: pCylinder4
+    400022: Philter
+    400024: PhilterStand
+    400026: PhilterStandTall
+    400028: polySurface1
+    400030: polySurface10
+    400032: polySurface6
+    400034: polySurface8
+    400036: polySurface9
+    400038: pTorus20
+    400040: pTorus21
+    400042: pTorus23
+    400044: pTorus25
+    400046: Tube1
+    2100000: lambert1
+    2300000: Beaker
+    2300002: BunsensBurn
+    2300004: BunsensBurn1
+    2300006: BunsensBurn3
+    2300008: EggVial
+    2300010: pCylinder1
+    2300012: pCylinder2
+    2300014: pCylinder3
+    2300016: pCylinder4
+    2300018: PhilterStand
+    2300020: PhilterStandTall
+    2300022: polySurface1
+    2300024: polySurface10
+    2300026: polySurface6
+    2300028: polySurface8
+    2300030: polySurface9
+    2300032: pTorus20
+    2300034: pTorus21
+    2300036: pTorus23
+    2300038: pTorus25
+    2300040: Tube1
+    3300000: Beaker
+    3300002: BunsensBurn
+    3300004: BunsensBurn1
+    3300006: BunsensBurn3
+    3300008: EggVial
+    3300010: pCylinder1
+    3300012: pCylinder2
+    3300014: pCylinder3
+    3300016: pCylinder4
+    3300018: PhilterStand
+    3300020: PhilterStandTall
+    3300022: polySurface1
+    3300024: polySurface10
+    3300026: polySurface6
+    3300028: polySurface8
+    3300030: polySurface9
+    3300032: pTorus20
+    3300034: pTorus21
+    3300036: pTorus23
+    3300038: pTorus25
+    3300040: Tube1
+    4300000: polySurface1
+    4300002: polySurface9
+    4300004: polySurface10
+    4300006: PhilterStand
+    4300008: BunsensBurn
+    4300010: PhilterStandTall
+    4300012: BunsensBurn1
+    4300014: BunsensBurn3
+    4300016: polySurface6
+    4300018: EggVial
+    4300020: Tube1
+    4300022: pTorus20
+    4300024: polySurface8
+    4300026: pTorus21
+    4300028: pCylinder2
+    4300030: pCylinder3
+    4300032: pCylinder1
+    4300034: pCylinder4
+    4300036: pTorus23
+    4300038: pTorus25
+    4300040: Beaker
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 8
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
