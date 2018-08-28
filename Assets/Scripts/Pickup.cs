@@ -27,6 +27,8 @@ public class Pickup : MonoBehaviour {
         RaycastHit hit = ShootRay();
         if (hit.collider != null)
         {
+            //Material origMat = hit.collider.gameObject.GetComponent<Renderer>().material;
+
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -192,6 +194,9 @@ public class Pickup : MonoBehaviour {
     
 
 
+
+
+    
 
 	
 }

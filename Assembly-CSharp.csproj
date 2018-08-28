@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Mortar.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
+     <None Include="Assets\Materials\Outline_Diffuse.shader" />
+     <None Include="Assets\Materials\OutlineOnly.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>L:/Apothecarious/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

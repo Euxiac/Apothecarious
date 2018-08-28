@@ -20,7 +20,7 @@ public class Equipment : MonoBehaviour {
 
     public List<GameObject> itemList = new List<GameObject>();
 
-    public GameObject tempPrefab;
+    public GameObject DeathPotionPrefab; //this is where teh potion gameobject comes from, replace this in another script
 
     
 
@@ -101,7 +101,6 @@ public class Equipment : MonoBehaviour {
 
     public void ProcessItem()
     {
-        Debug.Log("Mortar Grind" + itemList[0].name);
         GameObject processObj = itemList[0].gameObject;
         Interactable objInteract = processObj.GetComponent<Interactable>();
         objInteract.isRaw = false;
@@ -155,7 +154,10 @@ public class Equipment : MonoBehaviour {
 
     public void CreatePotion()
     {
-        Instantiate(tempPrefab, positionList[positionList.Count-1].position,Quaternion.identity);
+
+        GameObject lePotion = CheckRecipe(itemList[0].GetComponent<Interactable>(),itemList[1].GetComponent<Interactable>(),itemList[2].GetComponent<Interactable>());
+
+        Instantiate(lePotion, positionList[positionList.Count-1].position,Quaternion.identity);
 
 
         //I'm pretty lost as to what to do now, Maaaaybe a new class or function where you pass each ingredient type
@@ -168,14 +170,16 @@ public class Equipment : MonoBehaviour {
         " + " + itemList[1].GetComponent<Interactable>().ingredientType +" " + itemList[1].GetComponent<Interactable>().curState.ToString() +
         " + " + itemList[2].GetComponent<Interactable>().ingredientType +" " + itemList[2].GetComponent<Interactable>().curState.ToString());
 
-        CheckRecipe(itemList[0].GetComponent<Interactable>(),itemList[1].GetComponent<Interactable>(),itemList[2].GetComponent<Interactable>());
+        Debug.Log(lePotion.name);
+
+        //CheckRecipe(itemList[0].GetComponent<Interactable>(),itemList[1].GetComponent<Interactable>(),itemList[2].GetComponent<Interactable>());
 
         Destroy(itemList[0]); 
         Destroy(itemList[1]);
         Destroy(itemList[2]);
     }
 
-    public void CheckRecipe(Interactable ing1, Interactable ing2, Interactable ing3 )
+    public GameObject CheckRecipe(Interactable ing1, Interactable ing2, Interactable ing3 )
     {
         if(ing1.ingredientType == Ingredients.Deathcap_Mushroom &&
          ing1.curState == Interactable.IngredientState.ground && 
@@ -186,6 +190,7 @@ public class Equipment : MonoBehaviour {
         {
             Debug.Log("WOOOOOOOO");
         }
+        return DeathPotionPrefab;
     }
 
 
