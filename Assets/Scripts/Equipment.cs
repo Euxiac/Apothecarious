@@ -21,11 +21,15 @@ public class Equipment : MonoBehaviour {
     public List<GameObject> itemList = new List<GameObject>();
 
     public GameObject tempPrefab;
+    
+    public GameObject particles;
+    
+	
 
     
-
 	// Use this for initialization
 	void Start () {
+   particles.SetActive (false);
 		
 	}
 	
@@ -40,7 +44,7 @@ public class Equipment : MonoBehaviour {
             full = false;
         }
 
-        
+       
 
 		
 	}
@@ -94,7 +98,8 @@ public class Equipment : MonoBehaviour {
         obj.GetComponent<Interactable>().curEquipment = null;
         itemList.Remove(obj);
         numOfObjects--;
-
+        particles.SetActive (false); //switch off active particles when picked up
+       
         
 
     }
@@ -127,7 +132,7 @@ public class Equipment : MonoBehaviour {
 
     }
 
-    public void Grind(Interactable objInteract)
+    public void Grind(Interactable objInteract) // grind, add particle efect here
     {
         if(objInteract.curState == Interactable.IngredientState.raw)
         {
@@ -135,21 +140,29 @@ public class Equipment : MonoBehaviour {
             objInteract.bowlGFX.SetActive(true);
             objInteract.isGround = true;
             objInteract.curState = Interactable.IngredientState.ground;
+
         }
         
 
     }
 
-    public void Boil(Interactable objInteract)
+    public void Boil(Interactable objInteract) // boil , add particle here
     {        
         if(objInteract.curState == Interactable.IngredientState.raw)
         {
+            particles.SetActive (true);
+            Debug.Log ("boiling cauldern");
             objInteract.rawGFX.SetActive(false);
             objInteract.beakerGFX.SetActive(true);
             objInteract.isBoiled = true;
             objInteract.curState = Interactable.IngredientState.boiled;
-        }
-        
+            
+            
+            
+          
+		
+		}
+		
 
     } 
 
@@ -184,7 +197,7 @@ public class Equipment : MonoBehaviour {
          ing3.ingredientType == Ingredients.White_Lily &&
          ing3.curState == Interactable.IngredientState.boiled)
         {
-            Debug.Log("WOOOOOOOO");
+            Debug.Log("Death Potion Complete");
         }
     }
 
